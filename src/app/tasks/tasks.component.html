@@ -1,0 +1,14 @@
+
+<section class="tasks">
+
+  <div class="tasks__createTask">
+    <create-task (createEvent)="createNewTask($event)"></create-task>
+  </div>
+  
+  <div class="tasks__getTasks">
+    <get-tasks (updateEvent)="updateTask($event)" (deleteEvent)="deleteTask($event)" [tasks]="tasks"></get-tasks>
+  </div>
+    
+
+</section>
+

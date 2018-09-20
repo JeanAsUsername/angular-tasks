@@ -1,0 +1,29 @@
+
+<div class="createTask">
+    <form (submit)="fireCreateEvent($event)" class="createTask__form">
+
+        <h2>Crear nueva tarea</h2>
+
+        <div class="createTask__fields">
+            <div class="createTask__field">
+                <label for="title">Titulo</label>
+                <input [(ngModel)]="task.title" type="text" name="title" id="title">
+            </div>
+        
+            <div class="createTask__field">
+                <label for="content">Contenido</label>
+                <input [(ngModel)]="task.body" type="text" name="body" id="body">
+            </div>
+                    
+            <div class="createTask__field">
+                <label>Prioridad</label>
+                <select [(ngModel)]="task.priority" name="prioriry">
+                    <option value="Baja">Baja</option>
+                    <option value="Media">Media</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+        </div>
+        <input class="createTask__submit" type="submit" value="Crear">
+    </form>
+</div>

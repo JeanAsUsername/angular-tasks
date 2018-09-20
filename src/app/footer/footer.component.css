@@ -1,0 +1,11 @@
+
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background-color: rgb(30, 30, 30);
+    font-family: 'Open Sans', sans-serif;
+}

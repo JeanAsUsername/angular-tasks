@@ -1,0 +1,40 @@
+
+
+<div class="getTasks">
+    <ul class="getTasks__list">
+        <li class="getTasks__task" *ngFor="let task of tasks">
+            <div class="task__header">
+
+                <!-- If -->
+                <p *ngIf="!task.edit else editTitle" >{{task.title}}</p>
+                <!-- Else -->
+                <ng-template #editTitle>
+                    <input class="task__edit-title" type="text" [(ngModel)]="updatedTask.title">
+                </ng-template>
+                
+                <div>
+                    <ng-container *ngIf="!task.edit else update">
+                        <span class="task__option" (click)="fireDeleteEvent(task.id)">Delete</span>
+                        <span (click)="editTask(task.id)" class="task__option">Edit</span>
+                    </ng-container>
+
+                    <ng-template #update>
+                        <span (click)="fireUpdateEvent($event)" class="task__option">Update</span>
+                    </ng-template>
+
+                    <span [ngStyle]="{backgroundColor: task.color}" class="task__badge">{{task.priority}}</span>
+                </div>
+                
+            </div>
+
+            <div class="task__body">
+                <!-- If -->
+                <p *ngIf="!task.edit else editBody">{{task.body}}</p>
+                <!-- Else -->
+                <ng-template #editBody>
+                    <textarea class="task__edit-body" type="" [(ngModel)]="updatedTask.body"></textarea>
+                </ng-template>
+            </div>
+        </li>
+    </ul>
+</div>

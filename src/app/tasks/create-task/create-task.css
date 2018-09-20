@@ -1,0 +1,51 @@
+
+.createTask {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+
+    color: white;
+    background-color: rgb(50, 50, 50);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.createTask__form {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.createTask__form > h2 {
+    text-decoration: underline;
+}
+
+.createTask__fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.createTask__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.createTask__field > label {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.createTask__field > input,
+.createTask__field > select {
+    width: 90%;
+    padding: 3px;
+}
+
+.createTask__submit {
+    width: 30%;
+    margin-top: 15px;
+    padding: 3px;
+    cursor: pointer;
+}

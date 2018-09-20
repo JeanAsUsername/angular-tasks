@@ -1,0 +1,16 @@
+
+.tasks {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+}
+
+.tasks__createTask {
+    height: 100%;
+    width: 30%;
+}
+
+.tasks__getTasks {
+    height: 100%;
+    width: 70%;
+}

@@ -1,0 +1,26 @@
+
+header {
+    height: 10vh;
+    min-height: 3rem;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+    background-color: rgb(30, 30, 30);
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.nav__item {
+    margin-right: 10px;
+    font-size: 1.02rem;
+    cursor: pointer;
+}
+
